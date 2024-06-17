@@ -8,7 +8,7 @@ export default function Home() {
     <div className="h-screen flex flex-col pb-6">
       <div className="h-full flex flex-col justify-center">
         <div className="-mt-20 max-w-4xl w-full text-center mx-auto px-4 sm:px-6 lg:px-8">
-          <div>
+          <div className="items-center justify-center flex flex-row">
             <Image
               src={"/images/logo/icon.svg"}
               height={20}
