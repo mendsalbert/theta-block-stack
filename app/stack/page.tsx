@@ -8,6 +8,9 @@ import {
   IconBell,
   IconMenu,
   IconUser,
+  IconCoin,
+  IconDatabase,
+  IconHistory,
 } from "@tabler/icons-react";
 export default function Home() {
   const diagramRef = useRef(null) as any;
@@ -130,29 +133,8 @@ export default function Home() {
     }
   }, []);
   return (
-    // <div className=" w-full  h-screen  bg-[#131722] shadow-md flex flex-col items-center justify-center  min-h-screen p-4">
-    //   <h1 className="text-3xl font-bold mb-4 text-gray-800">
-    //     Tech Stack Diagram
-    //   </h1>
-    //   <div
-    //     ref={diagramRef}
-    //     className=" w-full  h-screen  bg-[#131722]  shadow-md mb-4"
-    //   ></div>
-    //   {selectedNode && (
-    //     <div className="w-full max-w-4xl p-4  shadow-md rounded-lg">
-    //       <h2 className="text-2xl font-bold text-gray-800 mb-2">
-    //         {selectedNode.key}
-    //       </h2>
-    //       <p className="text-gray-700">
-    //         Quick information about {selectedNode.key}...
-    //       </p>
-    //       {/* Add more detailed information about the selected node here */}
-    //     </div>
-    //   )}
-    // </div>
-
-    <>
-      <header className="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full bg-white border-b text-sm py-2.5 sm:py-4 lg:ps-64 dark:bg-[#131722] dark:border-[#24283b]">
+    <div className="bg-[#161a27] min-h-screen w-full">
+      <header className="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full bg-[#161a27] border-b text-sm py-2.5 sm:py-4 lg:ps-64 dark:bg-[#131722] dark:border-[#24283b]">
         <nav
           className="flex basis-full items-center w-full mx-auto px-4 sm:px-6"
           aria-label="Global"
@@ -183,13 +165,13 @@ export default function Home() {
               </label>
               <div className="relative min-w-72 md:min-w-80">
                 <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-4">
-                  <IconSearch />
+                  <IconSearch size={20} />
                 </div>
                 <input
                   type="text"
                   id="icon"
                   name="icon"
-                  className="py-2 px-4 ps-11 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                  className="py-2 px-4 ps-11 block w-full border focus:border-[#24283b] focus:outline-none border-gray-200 rounded-full text-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-[#161a27] dark:border-[#24283b] dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
                   placeholder="Search"
                 />
               </div>
@@ -299,14 +281,14 @@ export default function Home() {
         id="application-sidebar"
         className="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform w-[260px] hidden fixed inset-y-0 start-0 z-[60] bg-white border-e border-gray-200 lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-[#131722] dark:border-[#24283b]"
       >
-        <div className="px-8 pt-4">
+        <div className="px-8 pt-5">
           <a
             className="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
-            href="../templates/admin/index.html"
+            href=""
             aria-label="Preline"
           >
-            iuyxs
-            {/* Add logo or text here */}
+            <img src="/images/logo/icon.svg" className="w-12 p-0" />
+            <p className="text-md font-bold pt-3">Theta Block Stack</p>
           </a>
         </div>
 
@@ -317,46 +299,21 @@ export default function Home() {
           <ul className="space-y-1.5">
             <li>
               <a
-                className="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-700 dark:text-white"
+                className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5 hover:border hover:border-[#19c99d] hover:border-opacity-75 text-sm text-neutral-700 rounded-lg dark:text-white"
                 href="#"
               >
-                Dashboard
+                <IconDatabase size={20} />
+                <span>Stack</span>
               </a>
             </li>
-
-            <li className="hs-accordion" id="users-accordion">
-              <button
-                type="button"
-                className="hs-accordion-toggle flex items-center w-full py-2 px-2.5 gap-x-3.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300"
+            <li>
+              <a
+                className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5 hover:border hover:border-[#19c99d] hover:border-opacity-75 text-sm text-neutral-700 rounded-lg dark:text-white"
+                href="#"
               >
-                Users
-                <IconChevronDown className="hs-accordion-active:hidden block" />
-                <IconChevronUp className="hs-accordion-active:block hidden" />
-              </button>
-
-              <div
-                id="users-accordion-content"
-                className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-              >
-                <ul className="pt-2 pl-2">
-                  <li>
-                    <a
-                      className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300"
-                      href="#"
-                    >
-                      List users
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300"
-                      href="#"
-                    >
-                      Add user
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                <IconHistory size={20} />
+                <span>History</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -365,7 +322,7 @@ export default function Home() {
       <main
         id="content"
         role="main"
-        className="lg:ps-72 dark:bg-[#161a27] h-screen"
+        className="lg:ps-72 bg-[#161a27] min-h-screen overscroll-auto"
       >
         <div className="lg:px-6 py-8">
           <div className="mx-auto">
@@ -373,10 +330,20 @@ export default function Home() {
               Dashboard
             </h1>
 
-            <nav className="hs-accordion-group hs-accordion-group-active:shadow-md space-y-4"></nav>
+            <div ref={diagramRef} className="w-full h-screen"></div>
+            {selectedNode && (
+              <div className="w-full bg-[#161a27] shadow-md rounded-lg">
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                  {selectedNode.key}
+                </h2>
+                <p className="text-gray-700">
+                  Quick information about {selectedNode.key}...
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
