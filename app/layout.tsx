@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <script src="./node_modules/preline/dist/preline.js"></script>
       <body className={inter.className}>
         <BaselimeRum

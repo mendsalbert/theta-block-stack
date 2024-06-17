@@ -599,6 +599,18 @@
   dependencies:
     tslib "^2.4.0"
 
+"@tabler/icons-react@^3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons-react/-/icons-react-3.6.0.tgz#2d2c4c714e8886034f1fd9ae630a81974f3a2b96"
+  integrity sha512-mkYGxlphNzvKq32teL+Z8wZW7I9zDftmNPX38UnZVCGjss2qbg0puqLhi1unfm5Y0CSefg+iAQrsjSL+DHx9YA==
+  dependencies:
+    "@tabler/icons" "3.6.0"
+
+"@tabler/icons@3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-3.6.0.tgz#9d5aeb4108bcd0d97b3c955ea425b645ea79a304"
+  integrity sha512-Zv0Ofc64RCMpZ2F8CvsWAphrSjerx5hEErt/RMmE+W8r4E5l5Lizi+My9KbbZQ4NyAtrtrOX80OY1oROZrRzEA==
+
 "@trpc/server@^10.40.0":
   version "10.45.2"
   resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.45.2.tgz#5f2778c4810f93b5dc407146334f8da70a0b51fb"
@@ -1850,6 +1862,11 @@ globby@^11.1.0:
     ignore "^5.2.0"
     merge2 "^1.4.1"
     slash "^3.0.0"
+
+gojs@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/gojs/-/gojs-3.0.4.tgz#512782a92f1d103ad1e1644f9cdbc787eb96588a"
+  integrity sha512-rblq9+vhL/6eBXwPLJ/pfl5xF8Mv1pcpCYHDCUyOnsCmXEPOdIuMIvW7p2IMo/TMQJd9KpvRY4Z7SM4xR16LkQ==
 
 gopd@^1.0.1:
   version "1.0.1"
