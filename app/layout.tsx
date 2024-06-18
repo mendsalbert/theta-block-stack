@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <script src="./node_modules/preline/dist/preline.js"></script>
+
       <body className={inter.className}>
         <BaselimeRum
           apiKey={process.env.NEXT_PUBLIC_BASELIME_API_KEY as string}
