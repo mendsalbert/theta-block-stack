@@ -8,7 +8,7 @@ export default function Home() {
   const nodeDataArray = [
     {
       key: "Frontend (React)",
-      title: "Frontend (React)",
+      title: "xxxFrontend (React)",
       description: "Build dynamic UIs with React.",
       icon: "/images/icons/brand-react.svg",
     },
