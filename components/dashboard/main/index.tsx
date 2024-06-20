@@ -4,9 +4,10 @@ import React from "react";
 interface MainProps {
   nodeDataArray: Array<any>;
   linkDataArray: Array<any>;
+  title: any;
 }
 
-function Main({ nodeDataArray, linkDataArray }: MainProps) {
+function Main({ nodeDataArray, linkDataArray, title }: MainProps) {
   return (
     <main
       id="content"
@@ -16,7 +17,7 @@ function Main({ nodeDataArray, linkDataArray }: MainProps) {
       <div className="lg:px-6 py-8">
         <div className="mx-auto ">
           <h1 className="text-xl font-bold sm:text-2xl dark:text-white">
-            Dashboard
+            {title}
           </h1>
           <div className="relative">
             <div className="absolute top-0 left-0 w-44 h-20 bg-[#161a27] z-30"></div>

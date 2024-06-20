@@ -34,7 +34,7 @@ const Diagram: React.FC<DiagramProps> = ({ nodeDataArray, linkDataArray }) => {
         },
         $(go.Shape, "RoundedRectangle", {
           fill: "rgba(255, 255, 255, 0.05)", // Transparent background
-          stroke: "rgba(255, 255, 255, 0.1)",
+          stroke: "#19C99D",
           strokeWidth: 1,
           parameter1: 10, // corner radius
         }),

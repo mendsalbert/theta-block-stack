@@ -1,7 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IconInfoSquareRounded } from "@tabler/icons-react";
+import "./CodeEditorStyles.css";
 
 function Modal({ setIsModalOpen, selectedNode }: any) {
+  const [code, setCode] = useState(selectedNode?.code || "");
+  const [lineNumbers, setLineNumbers] = useState<string>("");
+
+  useEffect(() => {
+    const handleHighlightAndLineNumbers = () => {
+      const lines = code.split("\n");
+      setLineNumbers(lines.map((_: any, i: any) => i + 1).join("\n"));
+    };
+
+    handleHighlightAndLineNumbers();
+  }, [code]);
+
+  const handleCodeChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setCode(event.target.value);
+  };
+
+  const syntaxHighlight = (code: string) => {
+    // Simple regex-based syntax highlighting for React and modern JavaScript/TypeScript
+    return code
+      .replace(
+        /(const|let|var|function|class|return|if|else|for|while|import|from|export|default|new|try|catch|finally|useState|useEffect|useContext|useReducer|useCallback|useMemo|useRef|useLayoutEffect|useImperativeHandle|axios|next)/g,
+        '<span class="keyword">$1</span>'
+      )
+      .replace(/("(.*?)"|'(.*?)'|`(.*?)`)/g, '<span class="string">$1</span>')
+      .replace(/(\d+)/g, '<span class="number">$1</span>')
+      .replace(/(\/\/.*?$)/gm, '<span class="comment">$1</span>')
+      .replace(/\/\*[\s\S]*?\*\//g, '<span class="comment">$&</span>')
+      .replace(
+        /(\b[A-Z][A-Za-z0-9_]*\b)/g,
+        '<span class="class-name">$1</span>'
+      )
+      .replace(/(\bconsole\b)/g, '<span class="console">$1</span>')
+      .replace(/(&lt;\/?[\w\s/="'-:]+&gt;)/g, '<span class="jsx">$1</span>');
+  };
+
   return (
     <div
       id="hs-cookies"
@@ -42,6 +78,21 @@ function Modal({ setIsModalOpen, selectedNode }: any) {
             <p className="text-gray-500 dark:text-neutral-500">
               {selectedNode?.description}
             </p>
+
+            <div className="code-editor w-full mt-4 relative">
+              <div className="line-numbers">
+                <pre>{lineNumbers}</pre>
+              </div>
+              <div
+                className="code-highlight bg-[#2d2d2d] p-4 rounded-lg text-left text-sm leading-5 text-white font-mono w-full h-64 overflow-auto"
+                dangerouslySetInnerHTML={{ __html: syntaxHighlight(code) }}
+              ></div>
+              <textarea
+                className="code-editor-textarea bg-transparent p-4 absolute inset-0 rounded-lg text-left text-sm leading-5 text-white font-mono w-full h-64 resize-none outline-none z-10"
+                value={code}
+                onChange={handleCodeChange}
+              ></textarea>
+            </div>
           </div>
 
           <div className="flex items-center">

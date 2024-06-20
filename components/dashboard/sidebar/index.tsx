@@ -40,19 +40,19 @@ function Sidebar() {
         <ul className="space-y-1.5">
           <li>
             <a
-              className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5 hover:border hover:border-[#19c99d] hover:border-opacity-75 text-sm text-neutral-700 rounded-lg dark:text-white"
+              className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
               href="#"
             >
-              <IconDatabase size={20} />
+              <IconDatabase size={24} />
               <span>Stack</span>
             </a>
           </li>
           <li>
             <a
-              className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5 hover:border hover:border-[#19c99d] hover:border-opacity-75 text-sm text-neutral-700 rounded-lg dark:text-white"
+              className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
               href="#"
             >
-              <IconHistory size={20} />
+              <IconHistory size={24} />
               <span>History</span>
             </a>
           </li>
@@ -62,9 +62,9 @@ function Sidebar() {
               onClick={toggleAccordion}
               className={`hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 ${
                 isOpen ? "hs-accordion-active:text-blue-600" : ""
-              } text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300 dark:hs-accordion-active:text-white`}
+              } text-sm rounded-lg  hover:bg-[#161a27] text-white   dark:hs-accordion-active:text-white`}
             >
-              <IconCode size={20} />
+              <IconCode size={24} />
               Example Stacks{" "}
               <svg
                 className={`hs-accordion-active:block ms-auto ${
@@ -106,29 +106,48 @@ function Sidebar() {
                 isOpen ? "block" : "hidden"
               }`}
             >
-              <ul className="pt-2 ps-2">
+              <ul
+                className="pt-2 ps-2 space-y-2.5
+               ml-4 bg-[#161a27] rounded-lg"
+              >
                 <li>
                   <a
-                    className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-300"
-                    href="#"
+                    className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
+                    href="stack-example/video/"
                   >
-                    Link 1
+                    Theta Video App
                   </a>
                 </li>
                 <li>
                   <a
-                    className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-300"
+                    className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
                     href="#"
                   >
-                    Link 2
+                    Theta AI App
                   </a>
                 </li>
                 <li>
                   <a
-                    className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-300"
+                    className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
                     href="#"
                   >
-                    Link 3
+                    Theta Edgestore App
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
+                    href="#"
+                  >
+                    Theta NFT app
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
+                    href="#"
+                  >
+                    Theta Game app
                   </a>
                 </li>
               </ul>

@@ -16,9 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="font-Inter">
       <script src="./node_modules/preline/dist/preline.js"></script>
-
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+        rel="stylesheet"
+      />
       <body className={inter.className}>
         <BaselimeRum
           apiKey={process.env.NEXT_PUBLIC_BASELIME_API_KEY as string}
