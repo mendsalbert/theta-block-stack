@@ -113,7 +113,7 @@ function Sidebar() {
                 <li>
                   <a
                     className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
-                    href="stack-example/video/"
+                    href="/stack-example/video/"
                   >
                     Theta Video App
                   </a>
@@ -121,7 +121,7 @@ function Sidebar() {
                 <li>
                   <a
                     className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
-                    href="#"
+                    href="/stack-example/ai/"
                   >
                     Theta AI App
                   </a>
@@ -129,7 +129,7 @@ function Sidebar() {
                 <li>
                   <a
                     className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
-                    href="#"
+                    href="/stack-example/edge-store/"
                   >
                     Theta Edgestore App
                   </a>
@@ -137,7 +137,7 @@ function Sidebar() {
                 <li>
                   <a
                     className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
-                    href="#"
+                    href="/stack-example/nft/"
                   >
                     Theta NFT app
                   </a>
@@ -145,7 +145,7 @@ function Sidebar() {
                 <li>
                   <a
                     className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722]  dark:text-neutral-400 dark:hover:text-neutral-300"
-                    href="#"
+                    href="/stack-example/game/"
                   >
                     Theta Game app
                   </a>
