@@ -20,7 +20,6 @@ function Modal({ setIsModalOpen, selectedNode }: any) {
   };
 
   const syntaxHighlight = (code: string) => {
-    // Simple regex-based syntax highlighting for React and modern JavaScript/TypeScript
     return code
       .replace(
         /(const|let|var|function|class|return|if|else|for|while|import|from|export|default|new|try|catch|finally|useState|useEffect|useContext|useReducer|useCallback|useMemo|useRef|useLayoutEffect|useImperativeHandle|axios|next)/g,
