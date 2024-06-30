@@ -12,13 +12,17 @@
     "@baselime/node-opentelemetry": "^0.2.10",
     "@baselime/react-rum": "^0.2.5",
     "@tabler/icons-react": "^3.6.0",
+    "@types/uuid": "^10.0.0",
+    "dotenv": "^16.4.5",
     "gojs": "^3.0.4",
     "next": "14.0.1",
+    "openai": "^4.52.2",
     "pino": "^8.16.1",
     "preline": "^2.3.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -81,7 +81,11 @@ export default function Home() {
     <div className="bg-[#161a27] min-h-screen w-full">
       <Header />
       <Sidebar />
-      <Main nodeDataArray={nodeDataArray} linkDataArray={linkDataArray} />
+      <Main
+        nodeDataArray={nodeDataArray}
+        linkDataArray={linkDataArray}
+        title={"title"}
+      />
     </div>
   );
 }
