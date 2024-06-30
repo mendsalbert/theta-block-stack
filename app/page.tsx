@@ -93,7 +93,7 @@ export default function Home() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           <a
             className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-[#151926] dark:border-[#24283b] border-opacity-30 hover:border-[#19c99d]"
-            href="#"
+            href="/stack-example/video"
           >
             <div className="p-4 md:p-5">
               <div className="flex">
@@ -113,7 +113,7 @@ export default function Home() {
 
           <a
             className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-[#151926] dark:border-[#24283b] border-opacity-30 hover:border-[#19c99d]"
-            href="#"
+            href="/stack-example/video"
           >
             <div className="p-4 md:p-5">
               <div className="flex">
@@ -133,7 +133,7 @@ export default function Home() {
 
           <a
             className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-[#151926] dark:border-[#24283b] border-opacity-30 hover:border-[#19c99d]"
-            href="#"
+            href="/stack-example/video"
           >
             <div className="p-4 md:p-5">
               <div className="flex">
@@ -153,7 +153,7 @@ export default function Home() {
 
           <a
             className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-[#151926] dark:border-[#24283b] border-opacity-30 hover:border-[#19c99d]"
-            href="#"
+            href="/stack-example/edge-store"
           >
             <div className="p-4 md:p-5">
               <div className="flex">
@@ -172,7 +172,7 @@ export default function Home() {
 
           <a
             className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-[#151926] dark:border-[#24283b] border-opacity-30 hover:border-[#19c99d]"
-            href="#"
+            href="/stack-example/nft"
           >
             <div className="p-4 md:p-5">
               <div className="flex">
@@ -191,7 +191,7 @@ export default function Home() {
 
           <a
             className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-[#151926] dark:border-[#24283b] border-opacity-30 hover:border-[#19c99d]"
-            href="#"
+            href="/stack-example/game"
           >
             <div className="p-4 md:p-5">
               <div className="flex">
