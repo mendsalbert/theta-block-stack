@@ -209,20 +209,6 @@ export default function Home() {
           </a>
         </div>
       </div>
-
-      <footer className="mt-auto max-w-4xl text-center mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-xs text-gray-600 dark:text-neutral-500">
-          © 2024 Preline. A product of{" "}
-          <a
-            className="text-gray-800 decoration-2 hover:underline font-semibold dark:text-neutral-300"
-            href="http://htmlstream.com/"
-            target="_blank"
-          >
-            Htmlstream
-          </a>
-          .
-        </p>
-      </footer>
     </div>
   );
 }
