@@ -167,7 +167,7 @@ export default function Home() {
                     Theta NFT
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-neutral-500">
-                    Learn how to build an NFT on theta networks
+                    Learn how to build an NFT on theta network
                   </p>
                 </div>
               </div>
