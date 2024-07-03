@@ -12,7 +12,6 @@ const openai = new OpenAI({
   apiKey: apiKey,
   dangerouslyAllowBrowser: true,
 });
-// git config user.email "40429398+mendsalbert@users.noreply.github.com"
 
 export default function Home({ params }: { params: { stack: any } }) {
   const [nodeDataArray, setNodeDataArray] = useState([]);
@@ -117,7 +116,7 @@ export default function Home({ params }: { params: { stack: any } }) {
 
       const { nodeDataArray, linkDataArray } = extractData();
 
-      const historyId = uuidv4(); // Generate a unique ID for each entry
+      const historyId = uuidv4();
       const newEntry = {
         id: historyId,
         timestamp: new Date().toISOString(),
