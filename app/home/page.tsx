@@ -19,16 +19,16 @@ function Home() {
           </h1>
         </div>
         <div className="mt-5 max-w-3xl text-center mx-auto">
-          <p className="text-md text-gray-600 dark:text-neutral-400">
-            Preline UI is an open-source set of prebuilt UI components,
-            ready-to-use examples and Figma design system based on the
-            utility-first Tailwind CSS framework.
+          <p className="text-md mb-4 text-gray-600 dark:text-neutral-400">
+            Great ideas start from generating ideas, and idea creation begins in
+            VS Code. Welcome to ThetaEdgeX, a comprehensive 3-in-1 platform
+            designed to enhance the Theta development ecosystem.
           </p>
         </div>
         {/*
          */}
 
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 lg:py-6 mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-12">
             <div className="text-center border-[2px] px-2 py-4 rounded-xl border-neutral-700">
               <div className="flex justify-center items-center   mx-auto ">
@@ -39,7 +39,8 @@ function Home() {
                   Theta Block Stack
                 </h3>
                 <p className="mt-1 text-gray-600 text-sm dark:text-neutral-400">
-                  Components are easily customized and extendable
+                  An AI-powered platform that generates a tech stack for any
+                  application you wish to build on the theta Network.
                 </p>
               </div>
             </div>
@@ -53,7 +54,9 @@ function Home() {
                   Theta Browser Extension
                 </h3>
                 <p className="mt-1 text-gray-600 text-sm dark:text-neutral-400">
-                  Components are easily customized and extendable
+                  Features include AI-assisted coding, smart contract
+                  deployment, and seamless integration with Theta network
+                  functionalities.{" "}
                 </p>
               </div>
             </div>
@@ -66,17 +69,19 @@ function Home() {
                   Theta VScode Extension
                 </h3>
                 <p className="mt-1 text-gray-600 text-sm dark:text-neutral-400">
-                  Components are easily customized and extendable
+                  Generate code, deploy smart contracts, and access
+                  comprehensive Theta documentation—all within VS Code.{" "}
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="max-w-[85rem] px-4 py-0 sm:px6 lg:px-8 lg:py-0 mx-auto">
           <div className="sm:w-1/2 xl:w-1/3 mx-auto text-center mb-6">
-            <h2 className="text-xl font-semibold md:text-2xl md:leading-tight text-gray-800 dark:text-neutral-200">
-              Trusted by Open Source, enterprise, and more than 99,000 of you
+            <h2 className="text-xl pt-4 font-semibold md:text-2xl md:leading-tight text-gray-800 dark:text-neutral-200">
+              45+ Developers Actively Using and Testing Across Leading
+              Frameworks
             </h2>
           </div>
 
