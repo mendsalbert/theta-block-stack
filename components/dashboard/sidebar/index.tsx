@@ -11,6 +11,8 @@ import {
   IconHistory,
   IconCode,
   IconInfoSquareRounded,
+  IconBook,
+  IconHome,
 } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 
@@ -67,7 +69,16 @@ function Sidebar() {
         className="hs-accordion-group p-6 w-full flex flex-col flex-wrap"
         data-hs-accordion-always-open
       >
-        <ul className="space-y-1.5">
+        <ul className="space-y-3">
+          <li>
+            <a
+              className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
+              href="/dashboard"
+            >
+              <IconHome size={23} />
+              <span>Dashboard</span>
+            </a>
+          </li>
           <li>
             <a
               className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
@@ -251,6 +262,15 @@ function Sidebar() {
                 </li>
               </ul>
             </div>
+          </li>
+          <li>
+            <a
+              className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
+              href="#"
+            >
+              <IconBook size={22} />
+              <span>Documentation</span>
+            </a>
           </li>
         </ul>
       </nav>
