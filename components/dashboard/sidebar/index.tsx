@@ -12,11 +12,41 @@ import {
   IconCode,
   IconInfoSquareRounded,
 } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
+
 function Sidebar() {
+  const router = useRouter();
+
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenHistory, setIsOpenHistory] = useState(false);
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
+
+  const toggleAccordionHistory = () => {
+    setIsOpenHistory(!isOpenHistory);
+  };
+
+  const shortenTitle = (title: any, maxLength: any) => {
+    if (title.length <= maxLength) return title;
+    return title.substring(0, maxLength) + "...";
+  };
+
+  const maxTitleLength = 20; // Define your desired max length here
+  const seen = new Set();
+
+  const getTechStackHistory = () => {
+    const techStack = localStorage.getItem("techStackHistory");
+    return techStack ? JSON.parse(techStack) : [];
+  };
+
+  const [techStackHistory, setTechStackHistory] = useState([]) as any;
+
+  useEffect(() => {
+    const techStack = getTechStackHistory();
+    setTechStackHistory(techStack);
+  }, []);
+
   return (
     <div
       id="application-sidebar"
@@ -47,14 +77,83 @@ function Sidebar() {
               <span>Stack</span>
             </a>
           </li>
-          <li>
-            <a
-              className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
-              href="#"
+          <li className="hs-accordion" id="account-accordion">
+            <button
+              type="button"
+              onClick={toggleAccordionHistory}
+              className={`hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 ${
+                isOpenHistory ? "hs-accordion-active:text-blue-600" : ""
+              } text-sm rounded-lg  hover:bg-[#161a27] text-white   dark:hs-accordion-active:text-white`}
             >
               <IconHistory size={24} />
-              <span>History</span>
-            </a>
+              History{" "}
+              <svg
+                className={`hs-accordion-active:block ms-auto ${
+                  isOpenHistory ? "block" : "hidden"
+                } size-4`}
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m18 15-6-6-6 6" />
+              </svg>
+              <svg
+                className={`hs-accordion-active:hidden ms-auto ${
+                  isOpenHistory ? "hidden" : "block"
+                } size-4`}
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              id="account-accordion-child"
+              className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300 ${
+                isOpenHistory ? "block" : "hidden"
+              }`}
+            >
+              <ul
+                className="pt-2 ps-2 space-y-2.5
+               ml-4 bg-[#161a27] rounded-lg"
+              >
+                {techStackHistory.length === 0 ? (
+                  <p>No tech stack history found.</p>
+                ) : (
+                  techStackHistory
+                    .filter((item: any) => {
+                      const isDuplicate = seen.has(item.searchQuery);
+                      seen.add(item.searchQuery);
+                      return !isDuplicate;
+                    })
+                    .map((item: any, index: any) => (
+                      <li key={index}>
+                        <a
+                          className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722] dark:text-neutral-400 dark:hover:text-neutral-300"
+                          onClick={() => {
+                            router.push(`/stack/${searchVal}`);
+                          }}
+                        >
+                          {shortenTitle(item.searchQuery, maxTitleLength)}
+                        </a>
+                      </li>
+                    ))
+                )}
+              </ul>
+            </div>
           </li>
           <li className="hs-accordion" id="account-accordion">
             <button

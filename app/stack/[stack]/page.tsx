@@ -26,7 +26,7 @@ export default function Home({ params }: { params: { stack: any } }) {
           {
             role: "user",
             content: `
-            I want to create a visual representation of the tech stack for an application built on the Theta Network named:${params.stack}. The tech stack should include frontend, backend, blockchain, video services, and additional relevant features. Here is an example structure for the arrays:
+            I want to create a visual representation of the tech stack for an application built on the Theta Network named:${params.stack}. The tech stack should include frontend, backend, blockchain, and additional relevant features. Here is an example structure for the arrays:
         note and listen carefully , not every app is a video app so adjust accordinly 
         javascript
         const nodeDataArray = [
@@ -115,6 +115,7 @@ export default function Home({ params }: { params: { stack: any } }) {
       );
 
       const { nodeDataArray, linkDataArray } = extractData();
+      const decodedString = decodeURIComponent(params.stack);
 
       const historyId = uuidv4();
       const newEntry = {
@@ -122,7 +123,10 @@ export default function Home({ params }: { params: { stack: any } }) {
         timestamp: new Date().toISOString(),
         nodeDataArray,
         linkDataArray,
+        searchQuery: decodedString,
       };
+
+      console.log(decodedString);
 
       const history = JSON.parse(
         localStorage.getItem("techStackHistory") || "[]"

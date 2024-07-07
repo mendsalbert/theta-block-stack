@@ -257,7 +257,7 @@ function Home() {
               <path d="m9 18 6-6-6-6" />
             </svg>
           </a>
-          <button
+          {/* <button
             type="button"
             className="relative group p-2 ps-3 inline-flex items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
           >
@@ -279,7 +279,7 @@ function Home() {
                 <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
               </svg>
             </span>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
