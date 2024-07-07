@@ -19,7 +19,7 @@ function Home() {
           </h1>
         </div>
         <div className="mt-5 max-w-3xl text-center mx-auto">
-          <p className="text-md mb-4 text-gray-600 dark:text-neutral-400">
+          <p className="text-md mb text-gray-600 dark:text-neutral-400">
             Great ideas start from generating ideas, and idea creation begins in
             VS Code. Welcome to ThetaEdgeX, a comprehensive 3-in-1 platform
             designed to enhance the Theta development ecosystem.
@@ -30,9 +30,11 @@ function Home() {
 
         <div className="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 lg:py-6 mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-12">
-            <div className="text-center border-[2px] px-2 py-4 rounded-xl border-neutral-700">
+            <div className="text-center  px-2 py-4 rounded-xl border-neutral-700">
               <div className="flex justify-center items-center   mx-auto ">
-                <IconStack size={60} />
+                <span className="border-[2px] border-neutral-700 rounded-full p-3">
+                  <IconStack size={60} />
+                </span>
               </div>
               <div className="mt-3">
                 <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
@@ -45,9 +47,11 @@ function Home() {
               </div>
             </div>
 
-            <div className="text-center border-[2px] px-2 py-4 rounded-xl border-neutral-700">
+            <div className="text-center px-2 py-4 rounded-xl border-neutral-700">
               <div className="flex justify-center items-center   mx-auto ">
-                <IconPuzzle size={56} />
+                <span className="border-[2px] border-neutral-700 rounded-full p-3">
+                  <IconPuzzle size={56} />
+                </span>
               </div>
               <div className="mt-3">
                 <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
@@ -60,9 +64,11 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className="text-center border-[2px] px-2 py-4 rounded-xl border-neutral-700">
+            <div className="text-center  px-2 py-4 rounded-xl border-neutral-700">
               <div className="flex justify-center items-center   mx-auto ">
-                <IconBrandVisualStudio size={56} />
+                <span className="border-[2px] border-neutral-700 rounded-full p-3">
+                  <IconBrandVisualStudio size={56} />
+                </span>
               </div>
               <div className="mt-3">
                 <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
