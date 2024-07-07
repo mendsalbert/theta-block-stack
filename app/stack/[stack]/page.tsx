@@ -17,6 +17,7 @@ export default function Home({ params }: { params: { stack: any } }) {
   const [nodeDataArray, setNodeDataArray] = useState([]);
   const [linkDataArray, setLinkDataArray] = useState([]);
   const [loading, setloading] = useState(false);
+  const [decodedParam, setdecodedParam] = useState("");
 
   const generateStack = async () => {
     setloading(true);
@@ -116,7 +117,6 @@ export default function Home({ params }: { params: { stack: any } }) {
 
       const { nodeDataArray, linkDataArray } = extractData();
       const decodedString = decodeURIComponent(params.stack);
-
       const historyId = uuidv4();
       const newEntry = {
         id: historyId,
@@ -146,6 +146,7 @@ export default function Home({ params }: { params: { stack: any } }) {
   useEffect(() => {
     const fetchData = async () => {
       await generateStack();
+      setdecodedParam(decodedParam);
     };
     fetchData();
   }, [params.stack]);
@@ -179,7 +180,7 @@ export default function Home({ params }: { params: { stack: any } }) {
               </svg>
             </div>
           ) : (
-            "Theta Tech Stack"
+            decodeURIComponent(params.stack)
           )
         }
       />

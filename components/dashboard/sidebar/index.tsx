@@ -56,7 +56,7 @@ function Sidebar() {
         <a
           className="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
           href=""
-          aria-label="Preline"
+          aria-label=""
         >
           <img src="/images/logo/icon.svg" className="w-12 p-0" />
           <p className="text-md font-bold pt-3">Theta Block Stack</p>
@@ -73,7 +73,7 @@ function Sidebar() {
               className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
               href="#"
             >
-              <IconDatabase size={24} />
+              <IconDatabase size={22} />
               <span>Stack</span>
             </a>
           </li>
@@ -85,7 +85,7 @@ function Sidebar() {
                 isOpenHistory ? "hs-accordion-active:text-blue-600" : ""
               } text-sm rounded-lg  hover:bg-[#161a27] text-white   dark:hs-accordion-active:text-white`}
             >
-              <IconHistory size={24} />
+              <IconHistory size={22} />
               History{" "}
               <svg
                 className={`hs-accordion-active:block ms-auto ${
@@ -144,7 +144,7 @@ function Sidebar() {
                         <a
                           className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:[#131722] dark:text-neutral-400 dark:hover:text-neutral-300"
                           onClick={() => {
-                            router.push(`/stack/${searchVal}`);
+                            router.push(`/stack/${item.searchQuery}`);
                           }}
                         >
                           {shortenTitle(item.searchQuery, maxTitleLength)}
@@ -163,7 +163,7 @@ function Sidebar() {
                 isOpen ? "hs-accordion-active:text-blue-600" : ""
               } text-sm rounded-lg  hover:bg-[#161a27] text-white   dark:hs-accordion-active:text-white`}
             >
-              <IconCode size={24} />
+              <IconCode size={22} />
               Example Stacks{" "}
               <svg
                 className={`hs-accordion-active:block ms-auto ${

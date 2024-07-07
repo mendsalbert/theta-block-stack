@@ -17,6 +17,7 @@ const config: Config = {
     },
     fontFamily: {
       Inter: ["Inter"],
+      Poppins: ["Poppins"],
     },
   },
   plugins: [require("preline/plugin")],

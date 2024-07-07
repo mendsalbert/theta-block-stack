@@ -44,6 +44,7 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
             Welcome to Theta Block Stack
           </h1>
+
           <p className="mt-3 text-gray-600 dark:text-neutral-400">
             Your AI-powered blockchain tech stack on the theta ecosystem for
             your Dapps
