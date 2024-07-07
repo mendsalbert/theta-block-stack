@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import { BaselimeRum } from "@baselime/react-rum";
 import "./globals.css";
+import Providers from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +33,7 @@ export default function RootLayout({
           enableWebVitals
           fallback={<h1>An error occured</h1>}
         >
-          {children}
+          <Providers>{children}</Providers>
         </BaselimeRum>
       </body>
     </html>

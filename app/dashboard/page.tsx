@@ -5,6 +5,7 @@ import { Main } from "next/document";
 import React from "react";
 import {
   IconBrandVisualStudio,
+  IconBrandVscode,
   IconPuzzle,
   IconStack,
 } from "@tabler/icons-react";
@@ -79,7 +80,7 @@ function Dashboard() {
                 <div className="text-center  px-2 py-4 rounded-xl border-neutral-700">
                   <div className="flex justify-center items-center   mx-auto ">
                     <span className="border-[2px] border-neutral-700 rounded-full p-3">
-                      <IconBrandVisualStudio size={40} />
+                      <IconBrandVscode size={40} />
                     </span>
                   </div>
                   <div className="mt-3">
@@ -97,7 +98,7 @@ function Dashboard() {
 
             <div className="max-w-[85rem] px-4 py-0 sm:px6 lg:px-8 lg:py-0 mx-auto">
               <div className="sm:w-1/2 xl:w-1/3 mx-auto text-center mb-6">
-                <h2 className="text-xl pt-4 font-semibold md:text-2xl md:leading-tight text-gray-800 dark:text-neutral-200">
+                <h2 className="text-lg pt-4 font-semibold md:text-2xl md:leading-tight text-gray-800 dark:text-neutral-200">
                   45+ Developers Actively Using and Testing Across Leading
                   Frameworks
                 </h2>

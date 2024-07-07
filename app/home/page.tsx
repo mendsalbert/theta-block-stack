@@ -1,5 +1,6 @@
 import {
   IconBrandVisualStudio,
+  IconBrandVscode,
   IconPuzzle,
   IconStack,
 } from "@tabler/icons-react";
@@ -67,7 +68,7 @@ function Home() {
             <div className="text-center  px-2 py-4 rounded-xl border-neutral-700">
               <div className="flex justify-center items-center   mx-auto ">
                 <span className="border-[2px] border-neutral-700 rounded-full p-3">
-                  <IconBrandVisualStudio size={56} />
+                  <IconBrandVscode size={56} />
                 </span>
               </div>
               <div className="mt-3">

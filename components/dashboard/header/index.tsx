@@ -1,5 +1,8 @@
 "use client";
 import React, { useState } from "react";
+import { usePrivy } from "@privy-io/react-auth";
+import { toSvg } from "jdenticon";
+import Image from "next/image";
 import {
   IconSearch,
   IconBell,
@@ -10,9 +13,26 @@ import {
 function Header() {
   const [isOpen, setisOpen] = useState(false);
 
+  const { ready, authenticated, login, logout, user } = usePrivy();
+  const disableLogin = !ready || (ready && authenticated);
+
+  const shortenAddress = (address: any) => {
+    if (address && address.length === 42) {
+      return `${address.slice(0, 5)}...${address.slice(-5)}`;
+    } else {
+      throw new Error("Invalid Ethereum address");
+    }
+  };
+
   const handleIsOpen = () => {
     setisOpen(!isOpen);
   };
+
+  const svgString = toSvg(user?.wallet?.address, 100);
+  console.log(svgString);
+
+  const imgSrc = `data:image/svg+xml;base64,${btoa(svgString)}`;
+
   return (
     <header className="relative top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full bg-[#161a27] border-b text-sm py-2.5 sm:py-4 lg:ps-64 dark:bg-[#131722] dark:border-[#24283b]">
       <nav
@@ -62,26 +82,35 @@ function Header() {
             >
               <IconBell size={22} />
             </button>
-            <button
-              type="button"
-              className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700"
-              data-hs-offcanvas="#hs-offcanvas-right"
-            >
-              <IconUserCircle size={22} />
-            </button>
-            <div className="hs-dropdown [--placement:bottom-right] relative inline-flex">
+            {disableLogin ? (
+              ""
+            ) : (
               <button
-                onClick={handleIsOpen}
-                id="hs-dropdown-with-header"
-                type="button"
-                className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700"
+                disabled={disableLogin}
+                onClick={login}
+                className="py-2 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
               >
-                <img
-                  className="inline-block size-[28px] border-2 border-green-500 rounded-full ring-2 ring-white dark:ring-neutral-800"
-                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                  alt="Image Description"
-                />
+                Connect
               </button>
+            )}
+
+            <div className="hs-dropdown [--placement:bottom-right] relative inline-flex">
+              {!disableLogin ? (
+                ""
+              ) : (
+                <button
+                  onClick={handleIsOpen}
+                  id="hs-dropdown-with-header"
+                  type="button"
+                  className="w-[3.375rem] h-[3.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700"
+                >
+                  <img
+                    className="inline-block size-[28px] border-2 border-green-500 rounded-full ring-2 ring-white dark:ring-neutral-800"
+                    src={imgSrc}
+                    alt="Image Description"
+                  />
+                </button>
+              )}
               {isOpen ? (
                 <div
                   className=" absolute right-0 top-10 hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100  min-w-60 bg-white shadow-md rounded-lg p-2 dark:bg-[#131722] dark:border dark:border-neutral-700"
@@ -92,13 +121,16 @@ function Header() {
                       Signed in as
                     </p>
                     <p className="text-sm font-medium text-gray-800 dark:text-neutral-300">
-                      0xfd3...e43
+                      {shortenAddress(user?.wallet?.address)}
                     </p>
                   </div>
                   <div className="mt-2 py-2 first:pt-0 last:pb-0">
                     <a
                       className="flex cursor-pointer items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300"
-                      href="#"
+                      onClick={() => {
+                        logout();
+                        setisOpen(false);
+                      }}
                     >
                       Disconnect
                     </a>

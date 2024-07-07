@@ -13,6 +13,8 @@ import {
   IconInfoSquareRounded,
   IconBook,
   IconHome,
+  IconPuzzle,
+  IconBrandVscode,
 } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 
@@ -262,6 +264,24 @@ function Sidebar() {
                 </li>
               </ul>
             </div>
+          </li>
+          <li>
+            <a
+              className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
+              href="#"
+            >
+              <IconPuzzle size={22} />
+              <span>Browser Extension</span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
+              href="#"
+            >
+              <IconBrandVscode size={22} />
+              <span>VS Code Extension</span>
+            </a>
           </li>
           <li>
             <a
