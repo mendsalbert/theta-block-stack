@@ -60,8 +60,8 @@ function Home() {
                 </h3>
                 <p className="mt-1 text-gray-600 text-sm dark:text-neutral-400">
                   Features include AI-assisted coding, smart contract
-                  deployment, and seamless integration with Theta network
-                  functionalities.{" "}
+                  deployment, and seamless integration with Theta network and
+                  cloud functionalities.{" "}
                 </p>
               </div>
             </div>

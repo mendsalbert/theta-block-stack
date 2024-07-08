@@ -73,7 +73,7 @@ function Dashboard() {
                     <p className="mt-1 text-gray-600 text-sm dark:text-neutral-400">
                       Features include AI-assisted coding, smart contract
                       deployment, and seamless integration with Theta network
-                      functionalities.{" "}
+                      and cloud functionalities.{" "}
                     </p>
                   </div>
                 </div>
