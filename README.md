@@ -163,15 +163,50 @@ npm install npm@latest -g
 
 ## Usage
 
-Use this section to provide examples of how the project can be used. Screenshots, code snippets, and demos are effective in demonstrating usage.
+<img src="https://i.imghippo.com/files/nrWRb1720456842.png
+  " alt="Logo" >
+<img src="https://i.imghippo.com/files/6tNkZ1720456913.png
+  " alt="Logo" >
+<img src="https://i.imghippo.com/files/Gbk1B1720456934.png
+  " alt="Logo" >
+<img src="https://i.imghippo.com/files/GIC6D1720456960.png
+  " alt="Logo" >
+<img src="https://i.imghippo.com/files/sVoO31720456985.png
+  " alt="Logo" >
+<img src="https://i.imghippo.com/files/jo5pY1720457012.png
+  " alt="Logo" >
+<img src="https://i.imghippo.com/files/SR1gZ1720457032.png
+  " alt="Logo" >
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!--  -->
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues](https://github.com/mendsalbert/theta-block-stack/issues) for a list of proposed features (and known issues).
+Theta EdgeX aims to continually evolve and expand its functionalities to better serve developers and the Theta network ecosystem. Below are the planned features and improvements:
+
+### Upcoming Features
+
+1. **Enhanced AI Capabilities**:
+
+   - Improve the AI-assisted coding suggestions with more advanced machine learning models.
+   - Implement natural language processing for broader and more accurate documentation queries.
+
+2. **Expanded Theta Network Integration**:
+
+   - Support for additional Theta network services and tools.
+   - Advanced wallet functionalities, including staking and governance features.
+
+3. **Community and Developer Tools**:
+   - Create a community forum and support portal for developers.
+   - Provide more code snippets and templates for popular frameworks like Vue.js and Angular.
+
+### Known Issues
+
+1. **Bug Fixes**:
+   - Resolve any reported bugs and improve the stability of the extensions.
+   - Ensure compatibility with the latest versions of VS Code and Chrome.
 
 <!-- CONTRIBUTING -->
 
