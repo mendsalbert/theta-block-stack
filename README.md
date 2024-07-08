@@ -50,7 +50,7 @@
 
 ## About The Project
 
-<img src="preview/home.png" alt="Logo" >
+<img src="preview/hoome.png" alt="Logo" >
 
 **ThetaEdgeX** is a comprehensive development tool designed to streamline the process of idea generation, coding, and deployment using the Theta network. By integrating AI-driven features and seamless theta edge cloud functionalities, ThetaEdgeX empowers developers to leverage the full potential of the Theta ecosystem.
 
