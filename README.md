@@ -7,7 +7,7 @@
   <h3 align="center">ThetaEdgeX</h3>
 
   <p align="center">
-     Theta EdgeX: a comprehensive 3 in 1 tool combining idea generation, AI-driven coding, and seamless Theta network integration for developers in VS Code and Chrome.
+     Theta EdgeX: a comprehensive 3 in 1 tool combining idea generation, AI-driven coding, and seamless Theta edge cloud  integration for developers in VS Code and Chrome.
     <br />
     <a href="https://github.com/mendsalbert/theta-block-stack"><strong>Explore the docs »</strong></a>
     <br />
@@ -65,7 +65,7 @@
 
 2. **Theta Network Integration**:
 
-   <img src="https://i.imghippo.com/files/tdada1720456043.png" alt="Logo" >
+   <img src="https://i.postimg.cc/YjKykr5Y/extension.png" alt="Logo" >
 
    - **Chrome Extension**: Facilitates easy access to Theta Wallet, enabling users to create, import, and manage wallets, list NFTs, track account activity, and deploy contracts directly from the browser.
    - **Theta Edge Cloud**: Supports AI model deployment and inference, leveraging Theta's cloud capabilities for powerful computing tasks.
