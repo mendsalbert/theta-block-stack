@@ -87,7 +87,6 @@
 
 **Developer Empowerment**:
 
-- **Theta Hackathon**: Supported by Theta Development Academy and ThetaCon, providing prizes and development advice to foster innovation.
 - **Extensive Documentation**: Expands Theta's existing documentation, making it accessible to a broader audience and simplifying the development process.
 
 ### How ThetaEdgeX Expands the Theta Ecosystem
