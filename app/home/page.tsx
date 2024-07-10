@@ -90,10 +90,12 @@ function Home() {
                 An AI-powered platform that generates a tech stack for any
                 application you wish to build on the theta Network.
               </p>
-              <div className="flex flex-row text-sm pt-2 items-center cursor-pointer space-x-2">
-                <span>Get Started</span>
-                <IconArrowRight size={18} />
-              </div>
+              <a href="/">
+                <div className="flex flex-row text-sm pt-2 items-center cursor-pointer space-x-2">
+                  <span>Get Started</span>
+                  <IconArrowRight size={18} />
+                </div>
+              </a>
             </div>
           </div>
 
@@ -112,10 +114,12 @@ function Home() {
                 and seamless integration with Theta network and cloud
                 functionalities.{" "}
               </p>
-              <div className="flex flex-row text-sm pt-2 items-center cursor-pointer space-x-2">
-                <span>Download</span>
-                <IconArrowRight size={18} />
-              </div>
+              <a href="https://chromewebstore.google.com/detail/theta-edge-extension/mghlmblnlegiompmipiccbckcaaigpkg?hl=en-GB&authuser=5&utm_source=ext_sidebar">
+                <div className="flex flex-row text-sm pt-2 items-center cursor-pointer space-x-2">
+                  <span>Download</span>
+                  <IconArrowRight size={18} />
+                </div>
+              </a>
             </div>
           </div>
           <div className="text-left  px-2 py-4 rounded-xl border-neutral-700">
@@ -132,10 +136,12 @@ function Home() {
                 Generate code, deploy smart contracts, and access comprehensive
                 Theta documentation—all within VS Code.{" "}
               </p>
-              <div className="flex flex-row text-sm pt-2 items-center cursor-pointer space-x-2">
-                <span>Download</span>
-                <IconArrowRight size={18} />
-              </div>
+              <a href="https://marketplace.visualstudio.com/items?itemName=thetaedgex.thetaedgex">
+                <div className="flex flex-row text-sm pt-2 items-center cursor-pointer space-x-2">
+                  <span>Download</span>
+                  <IconArrowRight size={18} />
+                </div>
+              </a>
             </div>
           </div>
         </div>

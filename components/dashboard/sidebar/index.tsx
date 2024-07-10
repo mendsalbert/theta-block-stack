@@ -268,7 +268,7 @@ function Sidebar() {
           <li>
             <a
               className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
-              href="#"
+              href="https://chromewebstore.google.com/detail/theta-edge-extension/mghlmblnlegiompmipiccbckcaaigpkg?hl=en-GB&authuser=5&utm_source=ext_sidebar"
             >
               <IconPuzzle size={22} />
               <span>Browser Extension</span>
@@ -277,7 +277,7 @@ function Sidebar() {
           <li>
             <a
               className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
-              href="#"
+              href="https://marketplace.visualstudio.com/items?itemName=thetaedgex.thetaedgex"
             >
               <IconBrandVscode size={22} />
               <span>VS Code Extension</span>
@@ -286,7 +286,7 @@ function Sidebar() {
           <li>
             <a
               className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
-              href="#"
+              href=""
             >
               <IconBook size={22} />
               <span>Documentation</span>

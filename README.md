@@ -119,8 +119,6 @@ Below is a link for a live demo.
 
 <!-- GETTING STARTED -->
 
-Certainly! Below is the complete `README` template for your project, customized with the necessary information:
-
 ## Getting Started
 
 This section will guide you through setting up ThetaEdgeX locally. Follow these simple steps to get a local copy up and running.
@@ -143,7 +141,7 @@ npm install npm@latest -g
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repository
    ```sh
-   git clone https://github.com/mendsalbert/theta-block-stack.git
+   git clone https://github.com/sensurusirupus/theta-block-stack.git
    ```
 3. Navigate to the project directory
    ```sh
