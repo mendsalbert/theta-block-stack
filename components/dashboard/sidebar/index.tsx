@@ -286,7 +286,7 @@ function Sidebar() {
           <li>
             <a
               className="flex items-center border-opacity-0 gap-x-3.5 py-2 px-2.5  hover:bg-[#161a27]  text-sm text-neutral-700 rounded-lg dark:text-white"
-              href=""
+              href="https://github.com/sensurusirupus/thetaEdgeX"
             >
               <IconBook size={22} />
               <span>Documentation</span>
